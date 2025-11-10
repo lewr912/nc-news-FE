@@ -1,0 +1,50 @@
+.articleCard {
+    background-color: beige;
+    display: grid;
+    border-radius: 0.6rem;
+    padding: 0.6rem;
+    gap: 5rem;
+    grid-template-columns: auto 1fr auto;
+    grid-template-rows: auto auto;
+    grid-template-areas: 
+    "topic title image"
+    "votes comments created_at";   
+    
+    
+    
+}
+
+.articleCard > img {
+    width: 350px;
+    max-height: 350px;
+    padding: 1rem;
+    grid-area: image;
+    
+    
+}
+
+.articleCard > h3 {
+    color: #04111f;
+    grid-area: title;
+    display: flex;
+    align-items: top;
+    justify-content: center;
+    
+   
+    
+}
+
+.articleCard > div {
+    
+    padding: 0.2rem;
+    
+}
+
+
+.articleCard > ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    
+    
+}

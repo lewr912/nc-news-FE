@@ -1,0 +1,9 @@
+header {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  width: inherit;
+  background-color: rgb(73, 41, 124);
+  padding: 1rem;
+  border-radius: 0.8rem;
+}

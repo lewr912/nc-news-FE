@@ -1,0 +1,9 @@
+#articleFeed {
+    list-style: none;
+    padding: 1rem;
+    border-radius: 0.8rem;
+    gap: 1.5rem;
+    display: grid;
+    background-color: rgba(96, 96, 230, 0.7);
+    
+}
