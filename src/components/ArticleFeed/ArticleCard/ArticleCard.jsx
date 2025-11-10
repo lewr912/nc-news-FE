@@ -1,5 +1,22 @@
-function ArticleCard() {
-    return  <li>ARTICLE CARD</li>
+import "./ArticleCard.css"
+
+function ArticleCard({articleDetails}) {
+    
+    
+    const {title, author, topic, votes, comment_count, created_at, article_img_url} = articleDetails;
+    
+    return  <li className="articleCard">
+        <h3>{title}</h3>
+        <div>{author}  </div>
+        <div>{topic} </div>
+        <ul>  
+            <li>{votes}</li>
+            <li>{comment_count}</li>
+            <li>{created_at}</li>
+        </ul>
+        
+        <img src={`${article_img_url}`}/>
+    </li>
 }
 
 export default ArticleCard;

@@ -1,10 +1,24 @@
+import { useEffect, useState } from "react";
 import ArticleCard from "./ArticleCard/ArticleCard"
+import "./ArticleFeed.css"
 
 function ArticleFeed() {
-    return <ul>ARTICLE FEED
-        <ArticleCard />
-        <ArticleCard />
-        <ArticleCard />
+    const [articleList, setArticleList] = useState([])
+    useEffect(() => {
+        fetch(`https://newsit-xcqx.onrender.com/api/articles`)
+        .then(response => {
+            return response.json();
+        })
+        .then(data => {
+            const { articles } = data;
+            setArticleList(articles);
+        })
+    }, [])
+    
+    return <ul id="articleFeed">article feed
+        {articleList.map((article) => {
+            return <ArticleCard key={article.article_id} articleDetails={article}/>
+        })}
     </ul>
 }
 
