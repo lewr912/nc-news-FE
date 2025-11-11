@@ -1,0 +1,10 @@
+#topicsBar {
+    background-color: rgb(101, 172, 55);
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    border-radius: 0.6rem;
+    padding: .6rem;
+    min-width: 0px;
+    flex-shrink: 0; 
+}

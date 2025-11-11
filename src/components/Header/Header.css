@@ -3,7 +3,9 @@ header {
   justify-content: center;
   align-items: flex-end;
   width: inherit;
-  background-color: rgb(73, 41, 124);
+  background-color: rgba(73, 41, 124, 0.3);
   padding: 1rem;
   border-radius: 0.8rem;
+  /* border: solid 0.2rem rgba(27, 25, 25, 0.2); */
+  box-shadow: 0 0 15px 5px rgba(254, 254, 254, 0.15);
 }

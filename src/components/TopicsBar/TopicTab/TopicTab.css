@@ -1,0 +1,9 @@
+.topicTab {
+    background-color: rgb(225, 230, 223);
+    list-style: none;
+    display: flex;
+    border-radius: 0.6rem;
+    padding: 2rem;
+    min-width: 0px;
+    flex-shrink: 0; 
+}
