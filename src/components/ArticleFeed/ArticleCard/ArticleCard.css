@@ -1,35 +1,42 @@
 .articleCard {
+    max-width: 100%;
+    height: 200px;
     background-color: beige;
     display: flex;
-    flex-direction: row;
     border-radius: 0.6rem;
     padding: 0.6rem;
-    gap: 5rem;
     min-width: 0px;
     flex-shrink: 0; 
-     
+    overflow: hidden;     
     
 }
 
-.articleCard > img {
-    height: 300px;
+.articleCard > section {
     padding: 1rem;
+    justify-content: space-between;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    flex-grow: 1;
+    min-width: 0;
     
-       
+    
 }
 
-.articleCard > h3 {
+.image {
+    display: block;
+    width: 250px;
+    max-width: 100%;    
+    height: auto;
+    flex-shrink: 0;
+    padding: 0.5rem;
+    justify-content: right;
+    align-items: right;
+}
+
+.articleCard > section > h3 {
     color: #04111f;
     display: flex;
-    align-items: top;
-    justify-content: center;
-    
-   
-    
+    justify-self: center;
 }
 
 .articleCard > div {
@@ -39,10 +46,9 @@
 }
 
 
-.articleCard > ul {
+.bottomRow {
     list-style: none;
     display: flex;
-    justify-content: flex-start;
-    
-    
+    gap: 2rem;
+    align-self: self-end;
 }
