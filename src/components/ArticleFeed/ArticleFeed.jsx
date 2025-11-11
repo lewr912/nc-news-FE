@@ -15,7 +15,7 @@ function ArticleFeed() {
         })
     }, [])
     
-    return <ul id="articleFeed">article feed
+    return <ul id="articleFeed">
         {articleList.map((article) => {
             return <ArticleCard key={article.article_id} articleDetails={article}/>
         })}
