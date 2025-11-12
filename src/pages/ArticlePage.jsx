@@ -23,7 +23,7 @@ function ArticlePage() {
     <main>
       article page
       <ArticleContent articleData={articleData} />
-      <CommentSection />
+      <CommentSection article_id={article_id}/>
     </main>
   );
 }
