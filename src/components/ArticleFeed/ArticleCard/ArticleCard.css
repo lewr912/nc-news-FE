@@ -7,17 +7,18 @@
     padding: 0.6rem;
     min-width: 0px;
     flex-shrink: 0; 
-    overflow: hidden;     
+    overflow: hidden;
+    justify-content: center;
+    align-items: flex-start;
     
 }
 
 .articleCard > section {
-    padding: 1rem;
-    justify-content: space-between;
     display: flex;
     flex-direction: column;
     flex-grow: 1;
     min-width: 0;
+    justify-content: center;
     
     
 }
@@ -36,7 +37,10 @@
 .articleCard > section > h3 {
     color: #04111f;
     display: flex;
-    justify-self: center;
+    flex-direction: row;
+    min-width: 500px;
+    justify-content: center;
+    align-items: flex-start;
 }
 
 .articleCard > div {

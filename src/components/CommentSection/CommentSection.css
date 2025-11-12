@@ -1,0 +1,10 @@
+#commentSection {
+  list-style: none;
+  padding: 1rem;
+  border-radius: 0.8rem;
+  gap: 1.5rem;
+  display: grid;
+  background-color: rgba(61, 61, 208, 0.7);
+  min-width: 0px;
+  flex-shrink: 0;
+}
