@@ -1,5 +1,5 @@
 function DownVote() {
-    return <button>DOWN</button>
+    return <button className="downVote"></button>
 }
 
 export default DownVote;

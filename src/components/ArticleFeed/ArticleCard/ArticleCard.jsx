@@ -18,12 +18,11 @@ function ArticleCard({ articleDetails }) {
     <li className="articleCard">
         <Link to={`/articles/${article_id}`}>Expand</Link>
         <section>
-      
+      <ul>
       <h3>{title}</h3>
-      <div>
-        <u>User</u> {author}{" "}
-      </div>
-      <div>{topic} </div>
+        <li><u>User</u> {author}</li>
+        <li><u>Topic</u> {topic} </li>
+        </ul>
       </section>
        <ul className="bottomRow">
         <li>
@@ -36,6 +35,7 @@ function ArticleCard({ articleDetails }) {
           <u>Created</u> {created_at}
         </li>
       </ul>
+      
       <img className="image" src={`${article_img_url}`} />
     </li>
   );
