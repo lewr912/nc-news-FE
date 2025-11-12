@@ -47,7 +47,7 @@ function ArticleContent({ articleData }) {
   return (
     <section id="articleContent">
       <div>
-        <u>User</u> {author} <h3>{title}</h3>
+        <u>Author</u> {author} <h3>{title}</h3>
       </div>
 
       <div>
