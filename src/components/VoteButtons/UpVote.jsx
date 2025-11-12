@@ -1,7 +1,7 @@
 import "./VoteButtons.css"
 
-function UpVote() {
-    return <button className="upVote"></button>
+function UpVote({ onVote, isDisabled }) {
+    return <button className="upVote" onClick={onVote} disabled={isDisabled}></button>
 }
 
 export default UpVote;
