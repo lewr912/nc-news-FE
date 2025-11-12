@@ -1,9 +1,11 @@
 import { useEffect, useState } from "react";
 import ArticleContent from "../components/ArticleContent/ArticleContent";
 import { useParams } from "react-router-dom";
+import CommentSection from "../components/CommentSection/CommentSection";
+
 
 function ArticlePage() {
-  const [articleData, setArticleData] = useState({});
+  const [articleData, setArticleData] = useState([]);
   const { article_id } = useParams();
 
   useEffect(() => {
@@ -21,6 +23,7 @@ function ArticlePage() {
     <main>
       article page
       <ArticleContent articleData={articleData} />
+      <CommentSection />
     </main>
   );
 }
