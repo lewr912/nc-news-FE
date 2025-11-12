@@ -17,22 +17,23 @@ function ArticleContent({ articleData }) {
       <div>
         <u>User</u> {author}
       </div>
-      <div>
+      <ul className="bottomRow"> <li>
         <u>Votes</u> {votes}
-      </div>
-      <div>
+      </li>
+      <li>
         {" "}
         <u>Created</u> {created_at}
-      </div>
-      <div>
+      </li>
+      <li>
         {" "}
         <u>Comments</u> {comment_count}
-      </div>
+      </li> </ul>
+      
       <div>
         <u>Body</u> {body}
       </div>
 
-      <img src={`${article_img_url}`} />
+      <img className="image" src={`${article_img_url}`} />
     </section>
   );
 }
