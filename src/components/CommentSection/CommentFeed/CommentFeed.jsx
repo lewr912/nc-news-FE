@@ -18,13 +18,13 @@ function CommentFeed() {
         const { comments } = data;
         setCommentsForArticle(comments);
       })
-  }, []);
+  }, [commentsForArticle]);
 
   return (
     <ul id="commentFeed">
       {commentsForArticle.map((comment) => {
-        const { body, votes, author, created_at } = comment;
-        return <CommentCard key={body} commentDetails={comment} />;
+        const { body, votes, author, created_at, comment_id} = comment;
+        return <CommentCard key={comment_id} commentDetails={comment} />;
       })}
     </ul>
   );
