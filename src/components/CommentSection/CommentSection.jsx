@@ -45,7 +45,7 @@ function CommentSection({ article_id, onCommentSubmit }) {
         onSubmitSuccess={onCommentSubmit}
         onCommentRefetch={handleNewComment}
       />
-      <CommentFeed commentsForArticle={commentsForArticle} />
+      <CommentFeed commentsForArticle={commentsForArticle} onCommentDelete={onCommentSubmit}/>
     </div>
   );
 }

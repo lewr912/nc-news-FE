@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
-import ArticleContent from "../components/ArticleContent/ArticleContent";
 import { Link, useParams } from "react-router-dom";
+import ArticleContent from "../components/ArticleContent/ArticleContent";
 import CommentSection from "../components/CommentSection/CommentSection";
+import "./ArticlePage.css"
 
 function ArticlePage() {
   const [articleData, setArticleData] = useState([]);
@@ -45,7 +46,7 @@ function ArticlePage() {
   }
 
   return (
-    <div>
+    <div id="articlePage">
       article page
       <ArticleContent articleData={articleData} />
       <CommentSection
