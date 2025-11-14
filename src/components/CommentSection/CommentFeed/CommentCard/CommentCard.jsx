@@ -9,14 +9,10 @@ function CommentCard({ commentDetails }) {
       {author}
       <u> Body </u>
       {body}
-      <ul className="bottomRow">
-        <li>
-          <u> Votes</u> {votes}
-        </li>
-        <li>
-          <u> Created</u> {convertTimeStamp(created_at)}
-        </li>
-      </ul>
+      <div className="bottomRow">
+        <u> Votes</u> {votes}
+        <u> Created</u> {convertTimeStamp(created_at)}
+      </div>
     </li>
   );
 }

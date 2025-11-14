@@ -63,22 +63,16 @@ function ArticleContent({ articleData }) {
       <h3>{title}</h3>
       <u>Body</u>
       {body}
-      <ul className="bottomRow">
-        {" "}
-        <li>
+      <div className="bottomRow">
+        <div>
           <VoteButton id={"upVote"} onVote={() => handleVote("up")} />
           <u>Votes</u> {currentVotes}
           <VoteButton id={"downVote"} onVote={() => handleVote("down")} />
-        </li>
-        <li>
-          {" "}
-          <u>Created</u> {convertTimeStamp(created_at)}
-        </li>
-        <li>
-          {" "}
-          <u>Comments</u> {comment_count}
-        </li>{" "}
-      </ul>
+        </div>
+        <u>Comments</u> {comment_count}
+        <u>Created</u>
+        {convertTimeStamp(created_at)}
+      </div>
       <img className="image" src={`${article_img_url}`} />
     </section>
   );
