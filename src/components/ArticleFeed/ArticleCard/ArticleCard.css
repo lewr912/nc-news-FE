@@ -9,12 +9,12 @@
     overflow: hidden;
     justify-content: center;
     align-items: flex-start;
-    border: 1px solid rgba(1,1,1,0.5);
+    border: 3px solid rgba(1,104,59,0.6);
     box-shadow: 1.5px 1.5px 10px 0px rgba(1,1,1,0.5);
     
     &:hover {
     transform: scale(1.005);
-    border-color: rgba(104,104,59,0.6);
+    border-color: rgba(104,164,59,0.6);
     box-shadow: 0.5px 0.5px 10px 0px rgba(1,1,1,0.8);
   }
 
