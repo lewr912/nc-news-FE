@@ -16,9 +16,10 @@ function ArticleContent({ articleData }) {
     votes,
     article_id,
   } = articleData;
-  const [isLoading, setIsLoading] = useState(true);
+
   const [currentVotes, setCurrentVotes] = useState(votes);
   const [userVoteDirection, setUserVoteDirection] = useState("none");
+
   useEffect(() => {
     setCurrentVotes(votes);
   }, [votes]);

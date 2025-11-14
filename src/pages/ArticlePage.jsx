@@ -1,27 +1,30 @@
 import { useEffect, useState } from "react";
 import ArticleContent from "../components/ArticleContent/ArticleContent";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import CommentSection from "../components/CommentSection/CommentSection";
 
 function ArticlePage() {
   const [articleData, setArticleData] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
+  const [error, setError] = useState(null);
   const { article_id } = useParams();
 
   function fetchArticleData() {
     setIsLoading(true);
+    setError(null)
     fetch(`https://newsit-xcqx.onrender.com/api/articles/${article_id}`)
       .then((response) => {
-        if (response.ok) {
-          return response.json();
+        if (!response.ok) {
+          setError(`This article id is invalid.`)
         }
+        return response.json();
       })
       .then((data) => {
         const { article } = data;
         setArticleData(article);
         setIsLoading(false);
       })
-      .catch((error) => {
+      .catch((message) => {
         setIsLoading(false);
       });
   }
@@ -35,6 +38,10 @@ function ArticlePage() {
 
   if (isLoading) {
     return <div>Loading content</div>;
+  }
+
+  if(error){
+    return ( <div>{error} Please click <Link to="/" >here</Link> to return to the homepage </div> )
   }
 
   return (
