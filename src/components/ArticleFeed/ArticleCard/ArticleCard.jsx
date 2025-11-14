@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import "./ArticleCard.css";
+import { convertTimeStamp } from "../../../utils/utils";
 
 function ArticleCard({ articleDetails }) {
   const {
@@ -12,19 +13,22 @@ function ArticleCard({ articleDetails }) {
     article_img_url,
     article_id,
   } = articleDetails;
-  
 
   return (
     <li className="articleCard">
-        <Link to={`/articles/${article_id}`}>Expand</Link>
-        <section>
-      <ul>
-      <h3>{title}</h3>
-        <li><u>User</u> {author}</li>
-        <li><u>Topic</u> {topic} </li>
+      <Link to={`/articles/${article_id}`}>Expand</Link>
+      <section>
+        <ul>
+          <h3>{title}</h3>
+          <li>
+            <u>User</u> {author}
+          </li>
+          <li>
+            <u>Topic</u> {topic}{" "}
+          </li>
         </ul>
       </section>
-       <ul className="bottomRow">
+      <ul className="bottomRow">
         <li>
           <u>Votes</u> {votes}
         </li>
@@ -32,10 +36,10 @@ function ArticleCard({ articleDetails }) {
           <u>Comments</u> {comment_count}
         </li>
         <li>
-          <u>Created</u> {created_at}
+          <u>Created</u> {convertTimeStamp(created_at)}
         </li>
       </ul>
-      
+
       <img className="image" src={`${article_img_url}`} />
     </li>
   );
