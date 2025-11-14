@@ -1,5 +1,7 @@
 import { useState } from "react";
 import "./NewCommentForm.css";
+import { CURRENT_USER } from "../../../userStorage";
+
 
 function NewCommentForm({ article_id, onSubmitSuccess, onCommentRefetch }) {
   const [newComment, setNewComment] = useState("");
@@ -23,7 +25,7 @@ function NewCommentForm({ article_id, onSubmitSuccess, onCommentRefetch }) {
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({ username: "grumpy19", body: `${newComment}` }),
+        body: JSON.stringify({ username: {CURRENT_USER}, body: {newComment} }),
       }
     )
       .then((response) => {
@@ -45,7 +47,7 @@ function NewCommentForm({ article_id, onSubmitSuccess, onCommentRefetch }) {
   return (
     <form id="commentForm" onSubmit={handleSubmit}>
       <label htmlFor="userComment">Leave a comment</label>
-      <input
+      <textarea
         type="text"
         name="userComment"
         id="userComment"
