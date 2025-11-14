@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./NewCommentForm.css";
 
-function NewCommentForm({ article_id }) {
+function NewCommentForm({ article_id, onSubmitSuccess, onCommentRefetch }) {
   const [newComment, setNewComment] = useState("");
   const [error, setError] = useState("");
 
@@ -11,8 +11,8 @@ function NewCommentForm({ article_id }) {
       setError("Please enter a comment");
       return;
     }
-    if (newComment.length < 10) {
-      setError("Comments must be longer than 2 characters");
+    if (newComment.length < 4) {
+      setError("Minimum comment length is 4 characters 🙂");
       return;
     }
     setError("");
@@ -32,12 +32,14 @@ function NewCommentForm({ article_id }) {
         }
       })
       .then((data) => {
-        console.log(data);
-      })
+        setNewComment("");
+        onSubmitSuccess();
+        onCommentRefetch();
+      });
   }
   function handleChange(event) {
     setNewComment(event.target.value);
-    if (error) setError("")
+    if (error) setError("");
   }
 
   return (
@@ -50,11 +52,8 @@ function NewCommentForm({ article_id }) {
         value={newComment}
         onChange={handleChange}
       />
-      {error && (<p role="alert"> {error} </p>)}
-      <button
-        className="submitButton"
-        type="submit"
-      >
+      {error && <p role="alert"> {error} </p>}
+      <button className="submitButton" type="submit">
         Submit Comment
       </button>
     </form>
