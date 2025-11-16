@@ -1,7 +1,17 @@
-import "./TopicTab.css"
+import { NavLink } from "react-router-dom";
+import "./TopicTab.css";
 
-function TopicTab({topicName}) {
-     return <li className="topicTab">{topicName}</li>
+function TopicTab({ topicName, children }) {
+  return (
+    <NavLink
+      to={`/topic/${topicName}`}
+      className={({ isActive }) =>
+        isActive ? "topicTab active-tab" : "topicTab"
+      }
+    >
+      {children}
+    </NavLink>
+  );
 }
 
 export default TopicTab;

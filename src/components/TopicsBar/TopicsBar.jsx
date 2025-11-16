@@ -17,12 +17,12 @@ function TopicsBar() {
     }, [])
 
 
-    return <ul id="topicsBar">
+    return <nav id="topicsBar">
         {availableTopics.map(({slug}) => {
-            return <TopicTab key={slug} topicName={slug}/>
+            return <TopicTab key={slug} topicName={slug}><div>{slug}</div></TopicTab>
         })}
         
-    </ul>
+    </nav>
 }
 
 export default TopicsBar;
