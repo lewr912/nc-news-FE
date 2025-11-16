@@ -1,5 +1,5 @@
 #topicsBar {
-    background-color: rgba(255, 255, 100, 1);
+    background-color: rgb(101, 172, 55);
     list-style: none;
     display: flex;
     justify-content: space-around;
@@ -7,7 +7,4 @@
     padding: .6rem;
     min-width: 0px;
     flex-shrink: 0; 
-    position: sticky;
-  top: 11.6rem;
-  z-index: 1;
 }
