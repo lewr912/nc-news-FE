@@ -6,12 +6,27 @@ main {
 }
 
 .topic-highlight {
-    background-color: rgba(50, 110, 26, 0.4);
-    border-radius: 0.6rem;
-    padding: 0.2rem;
-    width: 5rem;
-    flex-shrink: 0;
-    border: 3px solid rgba(1,104,59,0.1);
-    text-align: center;
-    justify-content: flex-start;
+  background-color: rgba(50, 110, 26, 0.4);
+  border-radius: 0.6rem;
+  padding: 0.2rem;
+  width: 5rem;
+  flex-shrink: 0;
+  border: 3px solid rgba(1, 104, 59, 0.1);
+  text-align: center;
+  justify-content: flex-start;
+}
+
+.error-section {
+  align-content: center;
+  align-self: center;
+  height: 150px;
+  background-color: rgba(199, 187, 18, 1);
+  padding: 1rem;
+  border-radius: 0.8rem;
+  box-shadow: 0 0 10px 2px rgba(254, 254, 254, 0.15);
+  position: sticky;
+  top: 1.2rem;
+  z-index: 1;
+  font-weight: bold;
+  font-size: 1.1rem;
 }
