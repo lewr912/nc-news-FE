@@ -60,8 +60,8 @@ function ArticleContent({ articleData }) {
 
   return (
     <section id="articleContent">
-      <u>Author</u> {author}
-      <h3>{title}</h3>
+      <div>  <u>Author</u> - {author}
+      <h3>{title}</h3>  </div>
       <u>Body</u>
       {body}
       <div className="bottomRow">

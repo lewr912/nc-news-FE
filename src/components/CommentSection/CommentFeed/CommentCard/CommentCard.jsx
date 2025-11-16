@@ -22,8 +22,7 @@ function CommentCard({ commentDetails, onCommentDelete }) {
   if(CURRENT_USER === author){
     return (
     <li className="commentCard">
-      <u> Author </u>
-      {author}
+      <div><u> Author</u> - {author} </div>
       <u> Body </u>
       {body}
       <div className="bottomRow">

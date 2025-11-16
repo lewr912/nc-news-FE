@@ -47,7 +47,6 @@ function ArticlePage() {
 
   return (
     <div id="articlePage">
-      article page
       <ArticleContent articleData={articleData} />
       <CommentSection
         article_id={article_id}
