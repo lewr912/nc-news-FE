@@ -3,6 +3,7 @@ import Header from "./components/Header/Header";
 import MainView from "./pages/MainView";
 import ArticlePage from "./pages/ArticlePage";
 import "./App.css";
+import TopicPage from "./pages/TopicPage";
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<MainView />} />
+        <Route path="/topic/:topic" element={<TopicPage />} />
         <Route path="/articles/:article_id" element={<ArticlePage />} />
       </Routes>
       
