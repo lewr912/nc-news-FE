@@ -3,6 +3,7 @@ import VoteButton from "../VoteButtons/VoteButton";
 import "./ArticleContent.css";
 import "../VoteButtons/VoteButtons.css";
 import { convertTimeStamp } from "../../utils/utils";
+import BackButtonNavLink from "../BackButton";
 
 function ArticleContent({ articleData }) {
   const {
@@ -58,7 +59,7 @@ function ArticleContent({ articleData }) {
       });
   }
 
-  return (
+  return (<>
     <section id="articleContent">
       <div>  <u>Author</u> - {author}
       <h3>{title}</h3>  </div>
@@ -75,7 +76,8 @@ function ArticleContent({ articleData }) {
         {convertTimeStamp(created_at)}
       </div>
       <img className="image" src={`${article_img_url}`} />
-    </section>
+    </section><BackButtonNavLink /></>
+    
   );
 }
 
