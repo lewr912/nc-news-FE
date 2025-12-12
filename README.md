@@ -1,16 +1,67 @@
-# React + Vite
+# Northcoders News Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Hosted version here: https://nc-news-lewis.netlify.app/
 
-Currently, two official plugins are available:
+> Note: API is hosted for free on Render, please allow a few moments for the service to load.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+### Project Summary
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+NC News is a React based interactive news application that uses my [NC News API](https://github.com/lewr912/nc-news-BE.git) backend project.
+Users can:
 
-## Expanding the ESLint configuration
+- Browse all articles
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- View individual article pages with associated comments
+
+- Vote up or down on articles
+
+- Post comments on articles
+
+- Delete Comments
+
+- Filter articles by topic
+
+- Sort and order articles
+
+---
+
+**Minimum versions required to run**
+
+- Node.js >= 18 (Developed with v24.8.0)
+
+Check your current version with:
+`node -v`
+
+---
+
+### Getting Started
+
+**Clone the Repository**
+
+```
+git clone https://github.com/lewr912/nc-news-FE.git
+
+cd nc-news-FE
+```
+
+---
+
+**Install Dependencies**
+
+Install all packages required to run this project using this command:
+
+`npm install`
+
+---
+
+**To Start the Server**
+
+To run this project locally, use this command:
+
+`npm run dev`
+
+Server will be running at:
+
+`http://localhost:5173/`
