@@ -76,6 +76,6 @@ a:link, a:visited, a:active {
 .bottomRow {
     list-style: none;
     display: flex;
-    gap: 2rem;
-    align-self: self-end;
+    align-items: center;
+    justify-content: space-between;
 }

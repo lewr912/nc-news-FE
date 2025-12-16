@@ -59,25 +59,31 @@ function ArticleContent({ articleData }) {
       });
   }
 
-  return (<>
-    <section id="articleContent">
-      <div>  <u>Author</u> - {author}
-      <h3>{title}</h3>  </div>
-      <u>Body</u>
-      {body}
-      <div className="bottomRow">
+  return (
+    <>
+      <section id="articleContent">
         <div>
-          <VoteButton id={"upVote"} onVote={() => handleVote("up")} />
-          <u>Votes</u> {currentVotes}
-          <VoteButton id={"downVote"} onVote={() => handleVote("down")} />
+          {" "}
+          <h3>{title}</h3>
+          <p><u>By</u> - {author}</p>
+          <p><u>Topic</u> - {topic}</p>
+          <time><u>Created</u> - {convertTimeStamp(created_at)}</time>
         </div>
-        <u>Comments</u> {comment_count}
-        <u>Created</u>
-        {convertTimeStamp(created_at)}
-      </div>
-      <img className="image" src={`${article_img_url}`} />
-    </section><BackButtonNavLink /></>
-    
+        <div>
+          {body}
+          <img className="image" src={`${article_img_url}`} />
+        </div>
+        <div className="bottomRow">
+          <div>
+            <VoteButton id={"upVote"} onVote={() => handleVote("up")} />
+            <u>Votes</u> {currentVotes}
+            <VoteButton id={"downVote"} onVote={() => handleVote("down")} />
+          </div>
+          <div><u>Comments</u> ({comment_count})</div>
+        </div>
+      </section>
+      <BackButtonNavLink />
+    </>
   );
 }
 
