@@ -2,7 +2,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 101%;
+  width: 94vw;
   height: 150px;
   background-color: rgb(199, 187, 18);
   padding: 1rem;
@@ -22,11 +22,11 @@ header {
 #mainHeader {
   align-self: center;
   font-family: 'Times New Roman', Times, serif;
-  font-size: 70px;    
+  font-size: x-large;    
   }
 
   .homePage {
-    font-size: 26px;
+    font-size: x-small;
     border-radius: 4px;
     padding: .4rem;
     background-color: aqua;

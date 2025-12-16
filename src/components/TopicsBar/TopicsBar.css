@@ -5,7 +5,7 @@
     justify-content: space-around;
     border-radius: 0.6rem;
     padding: .6rem;
-    min-width: 0px;
+    width: 94vw;
     flex-shrink: 0; 
     position: sticky;
   top: 11.6rem;

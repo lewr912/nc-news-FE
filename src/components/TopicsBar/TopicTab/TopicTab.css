@@ -3,12 +3,12 @@
     list-style: none;
     display: flex;
     border-radius: 0.6rem;
-    padding: 2rem;
+    padding: 0.8rem;
     min-width: 0px;
     flex-shrink: 0;
     border: 3px solid rgba(1,104,59,0.6);
     box-shadow: 1.5px 1.5px 10px 0px rgba(1,1,1,0.5);
-    font-size: 22px;
+    font-size: medium;
 
      &:hover {
     transform: scale(1.04);
