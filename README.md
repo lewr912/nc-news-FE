@@ -65,4 +65,3 @@ To run this project locally, use this command:
 Server will be running at:
 
 `http://localhost:5173/`
-# calculator-app
